@@ -1,13 +1,22 @@
 <script lang="ts">
     // let the image path be specified by parent
+    export let title: string = ''
     export let src: string = ''
     export let alt: string = ''
+    export let text: string = ''
 </script>
 
 <div class="card">
-    <h2>Minh Nguyen</h2>
+    {#if title != ''}
+        <h2>{title}</h2>
+    {/if}
+
     {#if src != '' && alt != ''}
         <img src={src} alt={alt} />
+    {/if}
+
+    {#if text != ''}
+        <p>{text}</p>
     {/if}
 </div>
 
@@ -16,6 +25,7 @@
         --radius: 12px;
         --border-color: black;
         --blur-color: rgba(0, 0, 0, 0.2);
+        --element-background-color: rgb(228, 229, 232);
 
         background-color: white;
         width: 16em;
@@ -28,15 +38,23 @@
 
         img {
             width: 100%;
-            border-radius: calc(var(--radius) * 2);
+            border-radius: var(--radius);
             border: 2px solid var(--border-color);
         }
 
         h2 {
             padding: 0.125rem 0.5rem;
-            background-color: rgb(228, 229, 232);
+            background-color: var(--element-background-color);
             border-radius: calc(var(--radius) / 2);
             box-shadow: 0 4px 8px 0 var(--blur-color) inset;
+        }
+
+        p {
+            background-color: var(--element-background-color);
+            padding: 0.25rem;
+
+            border: 2px solid var(--border-color);
+            border-radius: calc(var(--radius) / 2);
         }
     }
 </style>

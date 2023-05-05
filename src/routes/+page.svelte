@@ -4,4 +4,5 @@
     const profile_image = { src: './src/lib/profile_pic.jpg', alt: 'Minh Nguyen' }
 </script>
 
-<Card {...profile_image} />
+<Card title='Minh Nguyen' {...profile_image} />
+<Card title='About Me' text='Hello, world!'/>
