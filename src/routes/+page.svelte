@@ -1,7 +1,7 @@
 <script>
     import Card from './Card.svelte'
-    import Header from './Header.svelte'
+
+    const profile_image = { src: './src/lib/profile_pic.jpg', alt: 'Minh Nguyen' }
 </script>
 
-<Header />
-<Card />
+<Card {...profile_image} />
