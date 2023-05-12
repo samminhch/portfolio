@@ -1,4 +1,4 @@
-<div class="background">
+<div class="container">
     <slot />
 </div>
 
@@ -13,20 +13,26 @@
 
     :global(p) {
         font-family: 'Atkinson Hyperlegible', sans-serif;
+        line-height: 1.5;
     }
 
-    .background {
-        /* make this take up the whole page */
-        min-height: 100vh;
-        min-width: 100vw;
+    :global(img) {
+        max-width: 100%;
+        display: block;
+    }
 
-        padding: 2em;
-        /* make this background a grid */
+    :global(body) {
         background-color: #d9ead3;
         background-size: 40px 40px;
 
         background-image: linear-gradient(to right, #333e36 1px, transparent 1px),
             linear-gradient(to bottom, #333e36 1px, transparent 1px);
+
         border: 1px solid #333e36;
+        height: 100vh;
+    }
+
+    .container {
+        margin: 2em;
     }
 </style>
