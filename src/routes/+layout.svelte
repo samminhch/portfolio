@@ -28,11 +28,13 @@
         background-image: linear-gradient(to right, #333e36 1px, transparent 1px),
             linear-gradient(to bottom, #333e36 1px, transparent 1px);
 
-        border: 1px solid #333e36;
         height: 100vh;
     }
 
     .container {
-        margin: 2em;
+        max-width: calc(100% - 4em);
+        margin-inline: auto;
+        margin-top: 2em;
+        margin-bottom: 2em;
     }
 </style>
