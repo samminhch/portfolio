@@ -1,7 +1,10 @@
 <script>
+    import Header from './Header.svelte'
     const profile_image = { src: './src/lib/profile_pic.jpg', alt: 'Minh Nguyen' }
 </script>
 
+<Header title='Portfolio :D'/>
+<br>
 <div class="flex-container">
     <div class="card profile-image">
         <h2>Minh Nguyen</h2>
@@ -14,6 +17,7 @@
 </div>
 
 <style lang="scss">
+    @import '../colors.scss';
     .flex-container {
         display: flex;
         gap: 1em;
@@ -23,9 +27,8 @@
         --radius: 12px;
         --border-color: black;
         --blur-color: rgba(0, 0, 0, 0.2);
-        --element-background-color: rgb(228, 229, 232);
 
-        background-color: white;
+        background-color: var(--color-foreground);
         max-width: 32em;
         height: -moz-fit-content;
         height: fit-content;
@@ -43,13 +46,13 @@
 
         h2 {
             padding: 0.125rem 0.5rem;
-            background-color: var(--element-background-color);
+            background-color: var(--color-foreground-accent);
             border-radius: calc(var(--radius) / 2);
             box-shadow: 0 4px 8px 0 var(--blur-color) inset;
         }
 
         p {
-            background-color: var(--element-background-color);
+            background-color: var(--color-foreground-accent);
             padding: 0.25rem;
 
             border: 2px solid var(--border-color);

@@ -3,6 +3,7 @@
 </div>
 
 <style>
+    @import '../colors.scss';
     @import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible&display=swap');
     @import url('https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap');
 
@@ -22,11 +23,11 @@
     }
 
     :global(body) {
-        background-color: #d9ead3;
+        background-color: var(--color-background);
         background-size: 40px 40px;
 
-        background-image: linear-gradient(to right, #333e36 1px, transparent 1px),
-            linear-gradient(to bottom, #333e36 1px, transparent 1px);
+        background-image: linear-gradient(to right, var(--color-background-accent) 1px, transparent 1px),
+            linear-gradient(to bottom, var(--color-background-accent) 1px, transparent 1px);
 
         height: 100vh;
     }
