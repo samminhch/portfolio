@@ -29,6 +29,8 @@
 
         background-color: white;
         width: 16em;
+        height: -moz-fit-content;
+        height: fit-content;
         padding: 0.5em 2em 1.5em;
 
         border: 3px solid var(--border-color);
